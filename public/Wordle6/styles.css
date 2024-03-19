@@ -136,7 +136,7 @@ body{
     left: 50vw;
     transform: translateX(-50%);
     width: 20em;
-    height: 15em;
+    height: 20em;
     /* background: black; */
     background: linear-gradient(
         to right bottom,

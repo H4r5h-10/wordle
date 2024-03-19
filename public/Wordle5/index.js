@@ -15434,7 +15434,7 @@ function flipTiles(tile, index, array, word) {
           () => {
             arr = [];
             startGame();
-            checkWinLose(word, array);
+            checkWinLose(tile, word, array);
           },
           { once: true }
         );
@@ -15442,18 +15442,18 @@ function flipTiles(tile, index, array, word) {
     });
 }
 
-function checkWinLose(word, tiles) {
+function checkWinLose(tile, word, tiles) {
   if (word == correctWord) {
     showAlert("You win", 5000);
     danceTiles(tiles);
     stopGame();
-    document.querySelector(".restart-container").classList.remove("hide");
+    tile.addEventListener("animationend",()=>document.querySelector(".restart-container").classList.remove("hide"));
     return;
   }
   remaining = guessGrid.querySelector(":not([data-letter])");
   if (remaining == null) {
     showAlert(`The correct word is: ${correctWord.toUpperCase()}`, 10000);
-    document.querySelector(".restart-container").classList.remove("hide");
+    tile.addEventListener("animationend",()=>document.querySelector(".restart-container").classList.remove("hide"));
     stopGame();
   }
 }
