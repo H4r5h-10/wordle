@@ -15290,8 +15290,7 @@ const targetWord = [
   "shave"
 ];
 const index = Math.floor(Math.random() * targetWord.length);
-// const correctWord = targetWord[index];
-const correctWord = 'class'
+const correctWord = targetWord[index];
 var arr=[];
 const guessGrid = document.querySelector(".grid");
 const keyboard = document.querySelector(".keyboard");
