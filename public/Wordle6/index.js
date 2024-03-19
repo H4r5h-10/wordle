@@ -15341,7 +15341,7 @@ function colorTile(){
   }
   for(i = 0; i < 6;  i++)
   {
-    if(temp.includes(word[i])){
+    if(!arr[i] && temp.includes(word[i])){
       currIndex = temp.indexOf(word[i]);
       arr[i] = "wrong-selected"
       temp = replaceAt(currIndex,'0',temp);

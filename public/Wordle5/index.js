@@ -15290,7 +15290,8 @@ const targetWord = [
   "shave"
 ];
 const index = Math.floor(Math.random() * targetWord.length);
-const correctWord = targetWord[index];
+// const correctWord = targetWord[index];
+const correctWord = 'class'
 var arr=[];
 const guessGrid = document.querySelector(".grid");
 const keyboard = document.querySelector(".keyboard");
@@ -15401,7 +15402,7 @@ function colorTile(){
   }
   for(i = 0; i < 5;  i++)
   {
-    if(temp.includes(word[i])){
+    if(!arr[i] && temp.includes(word[i])){
       currIndex = temp.indexOf(word[i]);
       arr[i] = "wrong-selected"
       temp = replaceAt(currIndex,'$',temp);
