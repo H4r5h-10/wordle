@@ -15453,7 +15453,7 @@ function checkWinLose(tile, word, tiles) {
   remaining = guessGrid.querySelector(":not([data-letter])");
   if (remaining == null) {
     showAlert(`The correct word is: ${correctWord.toUpperCase()}`, 10000);
-    tile.addEventListener("animationend",()=>document.querySelector(".restart-container").classList.remove("hide"));
+    document.querySelector(".restart-container").classList.remove("hide");
     stopGame();
   }
 }

@@ -15394,7 +15394,7 @@ function checkWinLose(tile, word, tiles) {
   if (remaining == null) {
     showAlert(`The correct word is: ${correctWord.toUpperCase()}`, 10000);
     stopGame();
-    tile.addEventListener("animationend",()=>document.querySelector(".restart-container").classList.remove("hide"));
+    document.querySelector(".restart-container").classList.remove("hide");
 
   }
 }
